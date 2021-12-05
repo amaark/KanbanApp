@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Board:
+  = @column.board
+%p
+  %b Column title:
+  = @column.column_title
+%p
+  %b Limit:
+  = @column.limit
+
+= link_to 'Edit', edit_column_path(@column)
+\|
+= link_to 'Back', columns_path

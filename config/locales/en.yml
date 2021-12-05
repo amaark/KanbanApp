@@ -31,4 +31,12 @@
 
 en:
   app_title: Kanban Boards
-  app_description: Easy software development flow
+  app_description: Keep software development flowing
+
+  boards:
+    create:
+      success: Board was successfully created.
+    update:
+      success: Board was successfully updated.
+    destroy:
+      success: Board was successfully destroyed.

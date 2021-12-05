@@ -1,0 +1,19 @@
+= form_for @column do |f|
+  - if @column.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@column.errors.count, "error")} prohibited this column from being saved:"
+      %ul
+        - @column.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :board
+    = f.text_field :board
+  .field
+    = f.label :column_title
+    = f.text_field :column_title
+  .field
+    = f.label :limit
+    = f.text_field :limit
+  .actions
+    = f.submit 'Save'

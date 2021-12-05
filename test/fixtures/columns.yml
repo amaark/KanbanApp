@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  board: one
+  column_title: MyString
+  limit: 
+
+two:
+  board: two
+  column_title: MyString
+  limit: 

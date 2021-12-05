@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Column:
+  = @card.column
+%p
+  %b Card name:
+  = @card.card_name
+%p
+  %b Description:
+  = @card.description
+%p
+  %b Topic:
+  = @card.topic
+%p
+  %b Type:
+  = @card.type
+
+= link_to 'Edit', edit_card_path(@card)
+\|
+= link_to 'Back', cards_path
