@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_05_192354) do
+ActiveRecord::Schema.define(version: 2021_12_05_203825) do
 
   create_table "boards", force: :cascade do |t|
     t.string "board_title", null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_12_05_192354) do
 
   create_table "cards", force: :cascade do |t|
     t.integer "column_id"
-    t.string "card_name", null: false
+    t.string "card_title", null: false
     t.string "description"
     t.string "topic"
     t.string "type"
