@@ -1,5 +1,6 @@
 class CardsController < ApplicationController
   before_action :set_card, only: %i[ show edit update destroy ]
+  before_action :set_column only: [:new, :create]
 
   # GET /cards or /cards.json
   def index
@@ -12,7 +13,7 @@ class CardsController < ApplicationController
 
   # GET /cards/new
   def new
-    @card = Card.new
+    @card = @column.cards.new
   end
 
   # GET /cards/1/edit
@@ -21,7 +22,7 @@ class CardsController < ApplicationController
 
   # POST /cards or /cards.json
   def create
-    @card = Card.new(card_params)
+    @card = @column.cards.new(card_params)
 
     respond_to do |format|
       if @card.save
@@ -61,6 +62,10 @@ class CardsController < ApplicationController
     def set_card
       @card = Card.find(params[:id])
     end
+
+    def set_column
+      @column = Column.find_by(id: params[:column_id]) ||
+                Column.find(card_params[:column_id])
 
     # Only allow a list of trusted parameters through.
     def card_params
