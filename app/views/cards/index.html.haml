@@ -16,10 +16,10 @@
     - @cards.each do |card|
       %tr
         %td= card.column
-        %td= card.card_name
+        %td= card.card_title
         %td= card.description
         %td= card.topic
-        %td= card.type
+        %td= card.card_type
         %td= link_to 'Show', card
         %td= link_to 'Edit', edit_card_path(card)
         %td= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' }

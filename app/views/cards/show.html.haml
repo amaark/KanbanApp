@@ -5,7 +5,7 @@
   = @card.column
 %p
   %b Card name:
-  = @card.card_name
+  = @card.card_title
 %p
   %b Description:
   = @card.description
@@ -14,7 +14,7 @@
   = @card.topic
 %p
   %b Type:
-  = @card.type
+  = @card.card_type
 
 = link_to 'Edit', edit_card_path(@card)
 \|

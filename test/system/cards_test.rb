@@ -14,11 +14,11 @@ class CardsTest < ApplicationSystemTestCase
     visit cards_url
     click_on "New Card"
 
-    fill_in "Card name", with: @card.card_name
+    fill_in "Card name", with: @card.card_title
     fill_in "Column", with: @card.column_id
     fill_in "Description", with: @card.description
     fill_in "Topic", with: @card.topic
-    fill_in "Type", with: @card.type
+    fill_in "Type", with: @card.card_type
     click_on "Create Card"
 
     assert_text "Card was successfully created"
@@ -29,11 +29,11 @@ class CardsTest < ApplicationSystemTestCase
     visit cards_url
     click_on "Edit", match: :first
 
-    fill_in "Card name", with: @card.card_name
+    fill_in "Card name", with: @card.card_title
     fill_in "Column", with: @card.column_id
     fill_in "Description", with: @card.description
     fill_in "Topic", with: @card.topic
-    fill_in "Type", with: @card.type
+    fill_in "Type", with: @card.card_type
     click_on "Update Card"
 
     assert_text "Card was successfully updated"

@@ -40,3 +40,22 @@ en:
       success: Board was successfully updated.
     destroy:
       success: Board was successfully destroyed.
+  
+  home:
+    contact:
+      title: Contact us
+      contact_us: Got feedback? Send us a message with the form below.
+    
+      name: "Name:"
+      enter_name: Enter your name
+      email: "Email:"
+      enter_email: Enter your email address
+      subject: "Subject:"
+      enter_subject: What is your message about?
+      message: "Message:"
+      enter_message: What do you want to say?
+      submit: Contact Us
+    
+    request_contact:
+      blank_fields: Please fill in all fields
+      email_sent: Thanks for your feedback! We'll be in touch shortly.
