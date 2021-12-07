@@ -41,6 +41,22 @@ en:
     destroy:
       success: Board was successfully destroyed.
   
+  cards:
+    create:
+      success: Card was successfully created.
+    update:
+      success: Card was successfully updated.
+    destroy:
+      success: Card was successfully destroyed.
+  
+  columns:
+    create:
+      success: Column was successfully created.
+    update:
+      success: Column was successfully updated.
+    destroy:
+      success: Column was successfully destroyed.
+  
   home:
     contact:
       title: Contact us
