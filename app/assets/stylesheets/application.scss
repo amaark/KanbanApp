@@ -29,6 +29,16 @@ div:not(.w3-sidebar.w3-bar-block.w3-card.w3-animate-left) {
     padding: 20px;
     margin: 20px;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: burlywood;
+    color: black;
+    text-align: center;
+}
  
 h1.page-heading{
     text-shadow: 2px 2px burlywood;

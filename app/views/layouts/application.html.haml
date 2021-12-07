@@ -41,6 +41,9 @@
           document.getElementById("mySidebar").style.display = "none";
           document.getElementById("openNav").style.display = "inline-block";
         }
+      
+      %div.footer
+        %p Kanban App created by Amaar Khan
 
       - flash.each do |key, value|
         = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
