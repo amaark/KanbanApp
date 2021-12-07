@@ -17,7 +17,7 @@ class BoardsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create board" do
     assert_difference('Board.count') do
-      post boards_url, params: { board: { board_title: @board.board_title } }
+      post boards_url, params: { board: { board_title: @board.board_title + "create" } }
     end
 
     assert_redirected_to board_url(Board.last)

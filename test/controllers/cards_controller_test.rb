@@ -3,6 +3,7 @@ require 'test_helper'
 class CardsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @card = cards(:one)
+    @column = columns(:one)
   end
 
   test "should get index" do
@@ -11,7 +12,7 @@ class CardsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_card_url
+    get new_card_url, params: { card: { column_id: @column.id } }
     assert_response :success
   end
 

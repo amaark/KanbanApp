@@ -2,10 +2,11 @@
 
 one:
   board: one
-  column_title: MyString
-  limit: 
+  column_title: Title 1
+  limit: MyLimit
 
 two:
   board: two
-  column_title: MyString
-  limit: 
+  column_title: Title 2
+  limit: MyLimit
+

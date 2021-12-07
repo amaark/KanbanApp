@@ -1,6 +1,6 @@
 class ColumnsController < ApplicationController
-  before_action :set_column, only: %i[ show edit update destroy ]
   before_action :set_board, only: [:new, :create]
+  before_action :set_column, only: %i[ show edit update destroy ]
 
   # GET /columns or /columns.json
   def index

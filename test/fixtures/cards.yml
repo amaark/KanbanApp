@@ -2,14 +2,14 @@
 
 one:
   column: one
-  card_title: MyString
-  description: MyString
-  topic: MyString
-  card_type: 
+  card_title: Title 1
+  description: MyDescription
+  topic: MyTopic
+  card_type: MyType
 
 two:
   column: two
-  card_title: MyString
-  description: MyString
-  topic: MyString
-  card_type: 
+  card_title: Title 2
+  description: MyDescription
+  topic: MyTopic
+  card_type: MyType

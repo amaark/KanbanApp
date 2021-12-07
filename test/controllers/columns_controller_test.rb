@@ -3,6 +3,7 @@ require 'test_helper'
 class ColumnsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @column = columns(:one)
+    @board = boards(:one)
   end
 
   test "should get index" do
@@ -11,7 +12,7 @@ class ColumnsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_column_url
+    get new_column_url, params: { column: { board_id: @board.id } }
     assert_response :success
   end
 

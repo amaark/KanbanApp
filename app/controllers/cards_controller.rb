@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
+  before_action :set_column, only: [:new, :create]
   before_action :set_card, only: %i[ show edit update destroy ]
-  before_action :set_column only: [:new, :create]
 
   # GET /cards or /cards.json
   def index
@@ -66,6 +66,7 @@ class CardsController < ApplicationController
     def set_column
       @column = Column.find_by(id: params[:column_id]) ||
                 Column.find(card_params[:column_id])
+    end
 
     # Only allow a list of trusted parameters through.
     def card_params
