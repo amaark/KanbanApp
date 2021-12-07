@@ -4,6 +4,23 @@
   %b Board title:
   = @board.board_title
 
-= link_to 'Edit', edit_board_path(@board)
+%p
+  %b Description:
+  = @board.board_description 
+
+= link_to t('edit'), edit_board_path(@board)
 \|
-= link_to 'Back', boards_path
+= link_to t('back'), boards_path
+
+%p Columns:
+%table
+  %tbody
+    - @board.columns.each do |column|
+      %tr{id: "column_#{column.id}"}
+        %td= column.column_title
+        %td= link_to t('show'), column
+        %td= link_to t('edit'), edit_column_path(column)
+        %td= link_to t('destroy'), column, :method => :delete, :data => { :confirm => t('confirmation') }, :remote => true
+
+%p= link_to t('add_column'), new_column_path(board_id: @board)
+

@@ -33,13 +33,24 @@ en:
   app_title: Kanban Boards
   app_description: Keep software development flowing
 
+  show: Show
+  back: Back
+  edit: Edit
+  destroy: Destroy
+  confirmation: Are you sure?
+  save: Save
+
   boards:
+    index:
+      new: New Board
     create:
       success: Board was successfully created.
     update:
       success: Board was successfully updated.
     destroy:
       success: Board was successfully destroyed.
+    show:
+      add_column: Add Column
   
   cards:
     create:
@@ -56,8 +67,14 @@ en:
       success: Column was successfully updated.
     destroy:
       success: Column was successfully destroyed.
+    show:
+      add_card: Add Card
   
   home:
+    home:
+      app_title: Kanban Boards
+      app_description: Keep software development flowing
+
     contact:
       title: Contact us
       contact_us: Got feedback? Send us a message with the form below.

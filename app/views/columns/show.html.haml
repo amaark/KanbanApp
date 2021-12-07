@@ -2,7 +2,7 @@
 
 %p
   %b Board:
-  = @column.board
+  = @column.board.board_title
 %p
   %b Column title:
   = @column.column_title
@@ -10,6 +10,18 @@
   %b Limit:
   = @column.limit
 
-= link_to 'Edit', edit_column_path(@column)
+= link_to t('edit'), edit_column_path(@column)
 \|
-= link_to 'Back', columns_path
+= link_to t('back'), columns_path
+
+%p Cards:
+%table
+  %tbody
+    - @column.cards.each do |card|
+      %tr{id: "card_#{card.id}"}
+        %td= card.card_title
+        %td= link_to t('show'), card
+        %td= link_to t('edit'), edit_card_path(card)
+        %td= link_to t('destroy'), card, :method => :delete, :data => { :confirm => t('confirmation') }, :remote => true
+
+%p= link_to t('add_card'), new_card_path(column_id: @column)

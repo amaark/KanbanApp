@@ -63,6 +63,7 @@ class ColumnsController < ApplicationController
       @column = Column.find(params[:id])
     end
 
+    # Store reference to the associated board for valid creation according to the model.
     def set_board
       @board = Board.find_by(id: params[:board_id]) ||
                Board.find(column_params[:board_id])

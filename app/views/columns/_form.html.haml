@@ -8,7 +8,8 @@
 
   .field
     = f.label :board
-    = f.text_field :board
+    %p= @column.board.board_title
+    = f.hidden_field :board_id, value: @column.board.id
   .field
     = f.label :column_title
     = f.text_field :column_title
@@ -16,4 +17,4 @@
     = f.label :limit
     = f.text_field :limit
   .actions
-    = f.submit 'Save'
+    = f.submit t('save')

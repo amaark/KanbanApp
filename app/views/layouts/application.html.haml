@@ -15,9 +15,34 @@
     = javascript_include_tag 'modernizr'
     = csrf_meta_tags
 
-  %body
+    -# %link{:href => "w3.css", :rel => "stylesheet"}
 
-    - flash.each do |key, value|
-      = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
+  -# Sidebar partial
+  #mySidebar.w3-sidebar.w3-bar-block.w3-card.w3-animate-left{:style => "display:none"}
+    %button.w3-bar-item.w3-button.w3-large{:onclick => "w3_close()"} Close ×
+    %a.w3-bar-item.w3-button{:href => "/"} Home
+    %a.w3-bar-item.w3-button{:href => "/contact"} Contact us
+    %a.w3-bar-item.w3-button{:href => "/boards"} Boards
 
-    = yield
+  #main
+    %body
+      
+      %button#openNav.w3-button.w3-dark-gray.w3-xlarge{:onclick => "w3_open()"} ☰
+
+      :javascript
+        function w3_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+
+      - flash.each do |key, value|
+        = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
+
+      = yield

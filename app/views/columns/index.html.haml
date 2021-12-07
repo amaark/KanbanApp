@@ -13,13 +13,11 @@
   %tbody
     - @columns.each do |column|
       %tr
-        %td= column.board
+        %td= column.board.board_title
         %td= column.column_title
         %td= column.limit
-        %td= link_to 'Show', column
-        %td= link_to 'Edit', edit_column_path(column)
-        %td= link_to 'Destroy', column, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('show'), column
+        %td= link_to t('edit'), edit_column_path(column)
+        %td= link_to t('destroy'), column, method: :delete, data: { confirm: t('confirmation') }
 
 %br
-
-= link_to 'New Column', new_column_path

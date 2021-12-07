@@ -19,15 +19,18 @@
 
 $font: "Roboto";
 $color: #f0f0e5;
- 
+
 body {
     font-family: $font;
     background-color: $color;
-    margin: 20px;
-    padding: 20px;
 }
  
-h1 {
+div:not(.w3-sidebar.w3-bar-block.w3-card.w3-animate-left) {
+    padding: 20px;
+    margin: 20px;
+}
+ 
+h1.page-heading{
     text-shadow: 2px 2px burlywood;
     text-transform: uppercase;
     text-align: center;
@@ -35,4 +38,12 @@ h1 {
 
 p {
     text-align: left;
+}
+
+td {
+    padding: 8px;
+}
+
+tr {
+    padding: 8px;
 }

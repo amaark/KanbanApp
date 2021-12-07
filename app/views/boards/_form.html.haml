@@ -9,5 +9,8 @@
   .field
     = f.label :board_title
     = f.text_field :board_title
+  .field
+    = f.label :board_description
+    = f.text_area :board_description
   .actions
-    = f.submit 'Save'
+    = f.submit t('save')

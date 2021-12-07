@@ -15,15 +15,13 @@
   %tbody
     - @cards.each do |card|
       %tr
-        %td= card.column
+        %td= card.column.column_title
         %td= card.card_title
         %td= card.description
         %td= card.topic
         %td= card.card_type
-        %td= link_to 'Show', card
-        %td= link_to 'Edit', edit_card_path(card)
-        %td= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('show'), card
+        %td= link_to t('edit'), edit_card_path(card)
+        %td= link_to t('destroy'), card, method: :delete, data: { confirm: t('confirmation') }
 
 %br
-
-= link_to 'New Card', new_card_path

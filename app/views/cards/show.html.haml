@@ -2,7 +2,7 @@
 
 %p
   %b Column:
-  = @card.column
+  = @card.column.column_title
 %p
   %b Card name:
   = @card.card_title
@@ -16,6 +16,6 @@
   %b Type:
   = @card.card_type
 
-= link_to 'Edit', edit_card_path(@card)
+= link_to t('edit'), edit_card_path(@card)
 \|
-= link_to 'Back', cards_path
+= link_to t('back'), cards_path

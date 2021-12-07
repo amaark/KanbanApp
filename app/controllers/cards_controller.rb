@@ -63,6 +63,7 @@ class CardsController < ApplicationController
       @card = Card.find(params[:id])
     end
 
+    # Store reference to the associated column for valid creation according to the model.
     def set_column
       @column = Column.find_by(id: params[:column_id]) ||
                 Column.find(card_params[:column_id])
